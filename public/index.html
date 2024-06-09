@@ -1,0 +1,361 @@
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DL</title>
+  <link href="./style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="general-impos">
+  <div class="containerHead" style="position: relative;">
+    <div id="APERTURAMENU" hidden style="color: rgb(255, 255, 255); position: absolute; top: 0; left: 0;">
+      <div style="padding: 30px;">
+        <button id="treLinee" class="button btn navbar-toggler" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation"
+          style="border: none; background: transparent; padding: 0px;" color: white>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h4 class="offcanvas-title" style="color:white" id="offcanvasDarkNavbarLabel">Menu</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <li class="nav-item">
+              <a class="nav-link" href="./menu/giocatori.html" style="color:white">I giocatori</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" style="color:white">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu/schemi.html" style="color:white">Gli schemi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu/galleria.html" style="color:white">Zona piantino</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu/accreditation.html" style="color:white">Accreditation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color:white">Citazioni</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" style="color:white">
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                style="color:white">
+                Divisa (foto + foto creazione)
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Maglietta</a></li>
+                <li><a class="dropdown-item" href="#">Pantaloncino</a></li>
+                <li><a class="dropdown-item" href="#">Maniche lunghe</a></li>
+
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li>
+              <hr class="dropdown-divider" style="color:white">
+            </li>
+            <li>
+              <hr class="dropdown-divider" style="color:white">
+            </li>
+          </ul>
+
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="AREAPRIVATA" style="color: rgb(255, 255, 255); position: absolute; top: 0; right: 0;">
+      <div style="padding: 30px;">
+        <button id="apriModalAccesso" data-bs-toggle="modal" data-bs-target="#modalACCESSO" class="button btn"
+          style="border: none; background: transparent; padding: 0px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-key"
+            viewBox="0 0 16 16">
+            <path
+              d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+            <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="intestazione" style="padding:30px; padding-top:50px">
+    <h1 id="big">Donkey Ladies</h1>
+    <p class="sottotitolo">Daje forte, sempre e comunque</p>
+  </div>
+
+  <div class="containerHeading">
+    <div class="row align-items-center">
+      <div class="col d-flex justify-content-start">
+      </div>
+
+
+      <div class="centeredBut col">
+        <button class="KBU" id="knowAbUs">
+          <span class="box">
+            Know about us
+          </span>
+        </button>
+      </div>
+      <div class="col d-flex justify-content-end">
+      </div>
+    </div>
+  </div>
+
+  <div class="containerLogo" style="padding-top:60px">
+    <div class="row">
+      <div class="col">
+        <div class="row align-items-center" style="color: #ff00d0; padding-top: 100px">
+          <hr>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row d-flex justify-content-center">
+         <img class="logo" src="./media/LogoLadies.png">
+        </div>
+      </div>
+      <div class="col">
+        <div class="row align-items-center" style="color: #ff00d0; padding-top: 100px">
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGINE SOTTOSTANTI -->
+  <!-- Calendario -->
+  <div class="containerMain" style="padding-top: 120px">
+    <div class="row align-items-center">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-5">
+        <h1 style="font-size: 45px">Calendario</h1>
+        <div style="padding-top:10px">
+          <button id="calendario" type="button" class="btn btn-primary main" data-bs-toggle="modal"
+            data-bs-target="#exampleModalCenter">Apri calendario </button>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-5">
+      </div>
+      <!-- Allenamenti -->
+      <div class="col-md-5 offset-md-5" style="padding-top: 50px; text-align: right;">
+        <div>
+          <h1 style="font-size: 45px">I nostri allenamenti</h1>
+          <div style="padding-top:10px">
+            <p style="font-size: 18px">Enjoy sport Center, Cernusco Sul Naviglio. Dalle 19.30 alle 21.30</p>
+          </div>
+          <a target="_blank"
+            href="https://www.google.it/maps/place/Enjoy+Company/@45.5211965,9.315435,17.89z/data=!4m14!1m7!3m6!1s0x4786c81f8ae72473:0xb39a4a9488eb3e17!2sEnjoy+Company!8m2!3d45.5213873!4d9.3164146!16s%2Fg%2F1tjrnvyh!3m5!1s0x4786c81f8ae72473:0xb39a4a9488eb3e17!8m2!3d45.5213873!4d9.3164146!16s%2Fg%2F1tjrnvyh?entry=ttu">
+            <button id="luogo" type="submit" class="btn btn-primary main">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt"
+                viewBox="0 0 16 16">
+                <path
+                  d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="containerFooter" style="padding-top: 210px; padding-bottom:50px">
+    <div class="row align-items-center">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-5">
+        <button id="instagramRef" type="submit" class="special-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+          </svg>
+        </button>
+        <button id="githubRef" type="submit" class="special-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt"
+            viewBox="0 0 16 16">
+           </svg>
+        </button>
+        <button id="telegramRef" type="submit" class="special-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram"
+            viewBox="0 0 16 16">
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal TORNEI -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content modal-impos">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Pianificazione eventi</h5>
+        </div>
+        <div class="modal-body">
+          <strong>Fase intermedia - Terza tappa di <a href="https://www.fifd.it/pages/campionati-italiani-2024">
+              Campionato </a><br></strong>
+          Quando: 27-28 Aprile 2024
+          <br>
+          Dove: Carpi, Italia
+          <hr>
+          <strong>Fase finale - Quarta tappa di <a href="https://www.fifd.it/pages/campionati-italiani-2024"> Campionato
+            </a><br></strong>
+          Quando: 08-09 Giugno 2024
+          <br>
+          Dove: che cazzo ne so, Italia
+          <hr>
+          <strong>Fase finale - Quarta tappa di <a href="https://www.fifd.it/pages/campionati-italiani-2024"> Campionato
+            </a><br></strong>
+          Quando: 08-09 Giugno 2024
+          <br>
+          Dove: che cazzo ne so, Italia
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary mod" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary mod">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" hidden>
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4">Sidebar</span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page">
+            <svg class="bi me-2" width="16" height="16">
+              <use xlink:href="#home"></use>
+            </svg>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <svg class="bi me-2" width="16" height="16">
+              <use xlink:href="#speedometer2"></use>
+            </svg>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <svg class="bi me-2" width="16" height="16">
+              <use xlink:href="#table"></use>
+            </svg>
+            Orders
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <svg class="bi me-2" width="16" height="16">
+              <use xlink:href="#grid"></use>
+            </svg>
+            Products
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link link-dark">
+            <svg class="bi me-2" width="16" height="16">
+              <use xlink:href="#people-circle"></use>
+            </svg>
+            Customers
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <div class="dropdown">
+        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+          <strong>mdo</strong>
+        </a>
+        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
+          <li><a class="dropdown-item" href="#">New project...</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal ACCESSO -->
+  <div class="modal fade" id="modalACCESSO" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content modal-impos">
+        <div class="modal-body" style="text-align: center;">
+
+          <h3 style="padding-top: 10px "> Accesso </h3>
+          <div class="alert alert-danger" style="font-size: 16px;" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+              <path
+                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            </svg>
+            Sezione raggiungibile solo dagli utenti autorizzati
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Inserire password..." aria-label="Username"
+              aria-describedby="basic-addon1" id="password">
+          </div>
+          <div style="padding-top: 6px">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Ho
+              scherzato</button>
+            <button style="background-color: #ff00d0;
+            border-color: transparent" id="accedi" type="button" class="btn btn-primary "
+              data-bs-dismiss="modal">Accedi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- aggiungere lina footer, non va telegram. Aggiungere nome, modal per calendario -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
