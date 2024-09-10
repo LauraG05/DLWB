@@ -1,6 +1,4 @@
-
 // HOME
-
 const conoscici = document.getElementById("knowAbUs");
 const calendario = document.getElementById("calendario");
 const ig = document.getElementById("instagramRef");
@@ -23,8 +21,7 @@ const giocatori = document.getElementById("giocatori");
 // dentro area privata c'è apriModalAccesso (chiave),
 // se va a accesso si aprono treLinee, che contengonno il menù
 
-// mettere icona chiave cliccabile che porta ad accesso, se superato
-// compaiono le tre righe per aprire il menù a tendina.
+// salvare la chiave (accesso deve rimanere) in sessione!!
 
 // se fallito non succede nulla, chiave si illumina di rosso
 

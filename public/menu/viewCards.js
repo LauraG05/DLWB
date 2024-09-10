@@ -1,3 +1,5 @@
+
+  
 const elencoCards = document.getElementById("elencoCards");
 import {estraiNominativiConNumeri} from '../fetch.js';
 
@@ -45,8 +47,7 @@ const atleta = [
 ];*/
 
 const src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Red_flag.svg/2560px-Red_flag.svg.png";
-
-  
+let indexTemp;
 const renderCards = async(div) => {
   console.log("dentro giocatori");
 
@@ -94,18 +95,28 @@ const elencoNomieNumeri = await estraiNominativiConNumeri();
       row = row.replace("%NICK", elencoNomieNumeri.nomi[i]);
       row = row.replace("%SRC", src);
       row = row.replace("%INTR", "Atleta numero #" + elencoNomieNumeri.numeri[i]);
-      console.log(row);
+      //console.log(row);
     html += row;
   };
   div.innerHTML = html;
 
+
   const atletaButtons = div.querySelectorAll(".atletaBut");
+
   atletaButtons.forEach((button, index) => {
+    console.log(`Button ${index}:`, button);
     button.onclick =() => {
       console.log("pers");
+      indexTemp = index; // index temporanea (dich fuori dalla funzione) valorizzata con index
+      sessionStorage.setItem('indexTemp', indexTemp);
+      console.log("INDEX "+ index)
       window.location.href = "./atleta.html";
     };
   });
 };
+
+export function getIndexExp() {
+  return sessionStorage.getItem('indexTemp'); // index valorizzata di nuovo
+}
 
 renderCards(elencoCards);

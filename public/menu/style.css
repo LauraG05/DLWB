@@ -146,9 +146,10 @@ button.special-btn {
 }
 
 .non-clickable-button {
-  cursor: not-allowed;
+  cursor: default !important;
   background-color: transparent !important;
   border: 1px solid transparent;
   border-radius: 20px !important; 
   border-color: rgb(255, 255, 255) !important;
 }
+

@@ -22,6 +22,18 @@ export const estraiNominativiConNumeri = async () => {
   return data;
 };
 
+export const specificheAtleta = async () => {
+  const response = await fetch("/specificheAtleta", {
+    method: "GET",
+    headers: {
+      "content-type": "application/json",
+    },
+  });
+  const data = await response.json();
+  return data;
+};
+
+
 export const verificaToken = async (password) => {
   const response = await fetch("/verificaToken", {
     method: "POST",

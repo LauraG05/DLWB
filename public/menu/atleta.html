@@ -10,51 +10,18 @@
   <meta name="viewport" content="width=device-width">
   <title>I giocatori</title>
   <link href="./style.css" rel="stylesheet" type="text/css" />
-
+  <style>
+    #top-right-button {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+    }
+  </style>
 </head>
 
 <body class="general-impos">
-  <div class="container">
-    <div class="col-md-1">
-    </div>
-    <h1 style="text-align: left; font-size: 45px; padding-top: 60px; padding-bottom:70px; padding-left: 70px;">Player
-    </h1>
-
-    <div id="CartaDellAtleta">
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
-          <img
-            src="https://img.freepik.com/premium-photo/abstract-red-background-christmas-valentines-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color_1258-681.jpg"
-            style="width: 300px; height: 370px;">
-        </div>
-        <div class="col-md-1">
-        </div>
-        <!-- div testo -->
-        <div class="col-md-5" style="padding-top:40px; padding-left:60px">
-          <p> Il Giuseppe Garibaldi fu un incrociatore leggero della Regia Marina, seconda e ultima unità della classe
-            Duca degli Abruzzi.
-            <br>
-            Fu varato dai cantieri Riuniti dell'Adriatico nell'aprile 1936.
-
-            Dopo aver partecipato all'occupazione dell'Albania nell'aprile 1939,<br><br> fu assegnato alla 1ª Squadra
-            delle
-            forze da battaglia italiane e fu così presente ai primi scontri navali contro la Royal Navy nel mar
-            Mediterraneo durante la seconda guerra mondiale, senza cogliere particolari successi.
-          </p>
-          <div style="padding-top:20px">
-            <button type="button" class="btn btn-primary non-clickable-button">Portatore</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div>
-    <button onclick="window.location.href = 'giocatori.html';" type="button" id="back"
-      class="btn btn-danger">back</button>
-  </div>
-  <script type="module" src="./viewCards.js"></script>
+<div id="paginaAtleta"></div>
+  <script type="module" src="./viewAthlete.js"></script>
 </body>
 
 </html>

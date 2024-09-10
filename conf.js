@@ -11,5 +11,5 @@ module.exports = {
     ca: fs.readFileSync("./ca (2).pem"),
     rejectUnauthorized: true,
   },
-  tokenMegaSegreto: "password"
+  tokenMegaSegreto: "DLWB2K24"
 };
